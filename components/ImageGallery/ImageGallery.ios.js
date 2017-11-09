@@ -1,6 +1,6 @@
 import React from 'react';
 import { InteractionManager } from 'react-native';
-import TransformableImage from 'react-native-transformable-image';
+import TransformableImage from '@applications-developer/react-native-transformable-image';
 
 import { connectStyle } from '@shoutem/theme';
 
