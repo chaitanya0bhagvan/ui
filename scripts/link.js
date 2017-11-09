@@ -7,12 +7,13 @@ const process = require('process');
 const nativeDependencies = [
   'react-native-vector-icons',
   'react-native-linear-gradient',
-  'react-native-share',
-  'react-native-photo-view',
+  'react-native-photo-view'
 ];
 
 const reactNativeLocalCli = `node node_modules/react-native/local-cli/cli.js`;
-const linkCommands = nativeDependencies.map(dependency => `${reactNativeLocalCli} link ${dependency}`);
+const linkCommands = nativeDependencies.map(
+  dependency => `${reactNativeLocalCli} link ${dependency}`
+);
 
 console.log('[@shoutem/ui] - linking native dependencies');
 
