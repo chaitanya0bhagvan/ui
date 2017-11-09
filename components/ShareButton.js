@@ -3,9 +3,7 @@ import React, {
   Component,
 } from 'react';
 
-import { Alert } from 'react-native';
-
-import Share from 'react-native-share';
+import { Alert, Share } from 'react-native';
 
 import { connectStyle } from '@shoutem/theme';
 
