@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import {
   Image as RNImage,
+  ImageBackground as RNImageBackground,
   Platform,
 } from 'react-native';
 import _ from 'lodash';
@@ -20,7 +22,12 @@ let externalPropsTransformer = null;
 class Image extends PureComponent {
   static propTypes = {
     ...RNImage.propTypes,
+    isBackground: PropTypes.bool,
   };
+
+  static defaultProps = {
+    isBackground: false,
+  }
 
   /**
    * Set a shared props transformer. The transformer will
@@ -94,6 +101,11 @@ class Image extends PureComponent {
   render() {
     const { transformedProps } = this.state;
 
+    if(isBackground) {
+      return (
+        <RNImageBackground {...transformedProps} />
+      )
+    }
     return (
       <RNImage {...transformedProps} />
     );
