@@ -22,11 +22,11 @@ let externalPropsTransformer = null;
 class Image extends PureComponent {
   static propTypes = {
     ...RNImage.propTypes,
-    isBackground: PropTypes.bool,
+    useImagebackground: PropTypes.bool,
   };
 
   static defaultProps = {
-    isBackground: false,
+    useImagebackground: false,
   }
 
   /**
@@ -101,7 +101,7 @@ class Image extends PureComponent {
   render() {
     const { transformedProps } = this.state;
 
-    if(isBackground) {
+    if(this.props.useImagebackground) {
       return (
         <RNImageBackground {...transformedProps} />
       )
