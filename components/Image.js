@@ -86,6 +86,11 @@ class Image extends PureComponent {
       transformedProps.style = { width: null, height: null, ...props.style };
     }
 
+    if (props.useImagebackground) {
+      const { style: { resizeMode, ...otherStyles } } = transformedProps;
+      transformedProps.style = { ...otherStyles };
+    }
+
     transformedProps.ref = this.captureNativeComponentRef;
     if (externalPropsTransformer) {
       transformedProps = externalPropsTransformer(transformedProps);
