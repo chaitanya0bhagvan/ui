@@ -14,8 +14,6 @@
     "lodash": "~4.15.0",
     "prop-types": "^15.6.0",
     "qs": "~4.0.0",
-    "react": "^16.0.0",
-    "react-native": "^0.50.3",
     "react-native-lightbox": "0.7.0",
     "react-native-linear-gradient": "~2.2.0",
     "react-native-navigation-experimental-compat": "1.1.0",
